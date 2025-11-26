@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Hero Banner with Background & Play Button</title>
+<link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+<section id="hero" class="video-hero" style="background-image:url('../assets/video-banner.png')">
+  <div class="hero__overlay"></div>
+  <video id="heroVideo"
+         playsinline
+         preload="metadata"
+         poster="https://images.pexels.com/photos/1558732/pexels-photo-1558732.jpeg"
+         >
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero__content">
+    <div class="btn-play" id="playBtn" aria-label="Play video" role="button" tabindex="0">
+      <img class="btn-play-video" src="../assets/video-icon.png" alt="">
+      <!-- <div class="btn-play-video"></div> -->
+    </div>
+  </div>
+
+  <!-- controls (visible only while playing) -->
+  <!-- <div class="controls" id="controls" style="display:none">
+    <button id="pauseBtn">Pause</button>
+    <button id="closeBtn">Close</button>
+  </div> -->
+</section>
+
+</body>
+</html>

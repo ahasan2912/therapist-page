@@ -1,0 +1,314 @@
+/* sora font */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+/* alexandria font */
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+
+/* Rubik */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --vg-hero-color: #EACEFF;
+    --vg-accent: #4D0361;
+    --vg-primary: #EEE3F6;
+    --vg-purple: #9E06C7;
+    --vg-alexandria: "Alexandria", sans-serif;
+    --vg-sora: "Sora", sans-serif;
+    --vg-rubik: "Rubik", sans-serif;
+}
+
+/* common css */
+.custom-container {
+    --padding-x: 48px;
+    --max-width: 1200px;
+    width: calc(100% - var(--padding-x) * 2);
+    max-width: var(--max-width);
+    margin-inline: auto;
+}
+
+.video-hero {
+    position: relative;
+    width: 100%;
+    min-height: 595px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 6;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+}
+
+.btn-play {
+    width: 113px;
+    height: 113px;
+    border-radius: 50%;
+    background-color: #4D0361;
+    cursor: pointer;
+    transition: 1s;
+    position: relative;
+}
+
+.btn-play:hover {
+    background: #8809ac;
+}
+
+.btn-play-video {
+    max-width: 47px;
+    max-height: 55.4px;
+    background-color: #fff;
+    clip-path: polygon(0 0, 0 100%, 100% 50%);
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.video-hero video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    z-index: 5;
+    background: #000;
+}
+
+.video-hero.playing video {
+    display: block;
+}
+
+.hero.playing .hero__overlay {
+    background: rgba(0, 0, 0, 0);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.video-hero.playing .btn-play {
+    display: none;
+}
+
+/* ----------------- our-therapists --------------------- */
+
+.our-therapists {
+    margin-top: 150px;
+}
+
+.our-therapists .therapist-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 52px;
+}
+
+.our-therapists .therapist-content {
+    max-width: 559px;
+    margin: auto;
+}
+
+.our-therapists .therapist-title {
+    font-family: var(--vg-alexandria);
+    color: #4D0361;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.our-therapists .therapist-description {
+    font-family: var(--vg-sora);
+    font-size: 20px;
+    line-height: 140%;
+    margin-top: 50px;
+}
+
+.our-therapists .therapist-container .therapist-image {
+    max-width: 588px;
+    border-radius: 20px;
+}
+
+.our-therapists .therapist-card-container {
+    margin-top: 75px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.our-therapists .therapist-card-container .therapist-card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.our-therapists .therapist-card-container .therapist-card .therapist-card-img {
+    /* max-width: 384px; */
+    width: 100%;
+    height: 366px;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+}
+
+.our-therapists .therapist-card-container .therapist-card .therapist-info {
+    font-family: var(--vg-sora);
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.our-therapists .therapist-card-container .therapist-card .therapist-info h1 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.our-therapists .therapist-card-container .therapist-card .therapist-info p {
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.our-therapists .therapist-card-container .btn-box {
+    max-width: 228px;
+    margin: 25px auto;
+    border: 1px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.our-therapists .therapist-card-container .therapist-btn {
+    width: 100%;
+    background: #4D0361;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.our-therapists .therapist-card-container .therapist-btn {
+    font-family: var(--vg-alexandria);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: center;
+    color: #FAFAFA;
+}
+
+.our-therapists .therapist-card-container .therapist-btn .btn-icon {
+    margin-top: 2px;
+    width: 20px;
+    height: auto;
+}
+
+/* ---------------- phone-description -------------------- */
+
+.phone-description {
+    margin-top: 150px;
+}
+
+.phone-description .phone-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 52px;
+}
+
+.phone-description .phone-container .phone-image {
+    max-width: 588px;
+    border-radius: 20px;
+}
+
+.phone-description .phone-container .phone-content {
+    max-width: 559px;
+    margin: auto;
+}
+
+.phone-description .phone-container .phone-text {
+    font-family: var(--vg-sora);
+    font-size: 20px;
+    line-height: 140%;
+}
+
+
+
+/* --------------------- Responsive ---------------------- */
+@media screen and (max-width: 1250px) {
+    .custom-container {
+        --padding-x: 24px;
+        --max-width: 1024px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .our-therapists {
+        margin-top: 50px;
+    }
+
+    .phone-description {
+        margin-top: 50px;
+    }
+
+    .our-therapists .therapist-card-container {
+        margin-top: 75px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .our-therapists .therapist-description {
+        margin-top: 20px;
+    }
+
+    .our-therapists .therapist-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .phone-description .phone-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .our-therapists .therapist-card-container {
+        margin-top: 75px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .our-therapists .therapist-container .therapist-image {
+        width: 100%;
+    }
+
+    .phone-description .phone-container .phone-image {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .our-therapists .therapist-card-container {
+        margin-top: 75px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 24px;
+    }
+}
