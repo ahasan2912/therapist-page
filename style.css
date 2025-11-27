@@ -240,7 +240,87 @@
     line-height: 140%;
 }
 
+/*  --------------- consultant section -------------------- */
+.consultant {
+    margin-top: 150px;
+}
 
+.consultant .consultant-title {
+    font-family: var(--vg-alexandria);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 150%;
+    color: #4D0361;
+}
+
+.consultant .consultant-card-container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.consultant .consultant-card-container .consultant-card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.consultant .consultant-card-container .consultant-card .consultant-card-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+}
+
+.consultant .consultant-card-container .consultant-card .consultant-info {
+    font-family: var(--vg-sora);
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.consultant .consultant-card-container .consultant-card .consultant-info h1 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.consultant .consultant-card-container .consultant-card .consultant-info p {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.consultant .consultant-card-container .consultant-card .btn-box {
+    max-width: 228px;
+    margin: 25px auto;
+    border: 1px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.consultant .consultant-card-container .consultant-card .btn-box .consultant-btn {
+    width: 100%;
+    background: #4D0361;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+    text-decoration: none;
+    border-radius: 10px;
+    font-family: var(--vg-alexandria);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: center;
+    color: #FAFAFA;
+}
+
+.consultant .consultant-card-container .consultant-card .btn-box .consultant-btn .btn-icon {
+    margin-top: 2px;
+    width: 20px;
+    height: auto;
+}
 
 /* --------------------- Responsive ---------------------- */
 @media screen and (max-width: 1250px) {
@@ -284,6 +364,14 @@
         gap: 20px;
     }
 
+    .consultant .consultant-card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .consultant {
+        margin-top: 50px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -301,14 +389,23 @@
     .phone-description .phone-container .phone-image {
         width: 100%;
     }
+
+    .consultant .consultant-card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .consultant .consultant-card-container {
+        margin-top: 25 px;
+    }
 }
 
 @media screen and (max-width: 575px) {
 
     .our-therapists .therapist-card-container {
-        margin-top: 75px;
-        display: grid;
         grid-template-columns: repeat(1, 1fr);
-        gap: 24px;
+    }
+
+    .consultant .consultant-card-container {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
